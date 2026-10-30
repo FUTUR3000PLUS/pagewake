@@ -3,84 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pagewake privacy policy</title>
-<meta name="description" content="Privacy policy of Pagewake, a Chrome extension that monitors web pages without an account or a server.">
+<title>Pagewake Privacy Policy</title>
 <style>
-  :root { --bg:#fbfaf7; --fg:#1d1d1b; --muted:#5b5b57; --rule:#e3e1da; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#141413; --fg:#ecebe6; --muted:#a3a29c; --rule:#2c2c2a; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 Georgia, "Times New Roman", serif; }
-  main { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
-  h1 { font-size:28px; margin:0 0 4px; } h2 { font-size:19px; margin:32px 0 8px; }
-  p.meta { color:var(--muted); margin:0 0 32px; font-size:14px; }
-  hr { border:0; border-top:1px solid var(--rule); margin:48px 0; }
-  a { color:inherit; }
+  :root { --bg: #f7f7f5; --text: #1b1f1d; --muted: #5b635f; --accent: #2f5d50; --border: #e3e5e1; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #121514; --text: #e7ebe8; --muted: #a3aca7; --accent: #6fb39d; --border: #2c322f; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 30px; letter-spacing: -.02em; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  p, li { color: var(--muted); }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+  .date { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+  .lang { border-top: 1px solid var(--border); margin-top: 48px; padding-top: 32px; }
+  code { font-size: 14px; }
 </style>
 </head>
 <body>
 <main>
-<h1>Pagewake privacy policy</h1>
-<p class="meta">Last updated: 30 October 2026 · Applies to Pagewake 1.0.1 and later · <a href="#fr">Version française</a></p>
+  <h1>Pagewake Privacy Policy</h1>
+  <div class="date">Last updated: 27 October 2026 · <a href="#fr">Version française</a></div>
 
-<h2>Who we are</h2>
-<p>Pagewake is published by FUTUR3000+, sole proprietorship of Alban Jean-Baptiste Souletie, 9 rue du Louvre, 75001 Paris, France (RCS Paris 878 163 567). Contact: <a href="mailto:studio.souletie+pagewake@gmail.com">studio.souletie+pagewake@gmail.com</a>.</p>
+  <p><strong>Summary: Pagewake does not collect, store or sell any personal data. Your monitors and their history stay in your browser.</strong></p>
 
-<h2>What Pagewake collects</h2>
-<p>Nothing. Pagewake has no server and no account. The developer receives no data about you, your browsing or the pages you monitor.</p>
+  <h2>What the extension stores</h2>
+  <p>The web pages you choose to monitor (URL, optional element selector, name, settings), up to 20 text snapshots per monitor, and your preferences. All of it is stored locally in your browser with <code>chrome.storage.local</code>. It is never sent to the developer or to any server operated by the developer. Pagewake has no server and no account.</p>
 
-<h2>What stays in your browser</h2>
-<p>Your monitors (the addresses and elements you chose to watch), the last 20 text snapshots of each, and your settings are stored in Chrome's local storage on your device. They never leave it, except in the two cases below.</p>
-<p>Pages are fetched directly from your computer, without your cookies, at the interval you chose.</p>
+  <h2>Network requests</h2>
+  <ul>
+    <li><strong>Monitored pages.</strong> To check for changes, your browser downloads the pages you chose to monitor, directly from their websites, without your cookies. Those websites see an ordinary request from your computer, the same as when you visit them.</li>
+    <li><strong>Webhooks (optional, Pro).</strong> If you enter a webhook URL, each change (monitor name, page URL, changed text) is sent to that URL and nowhere else. You choose and control the destination.</li>
+    <li><strong>License (ExtensionPay).</strong> Pagewake uses <a href="https://extensionpay.com/">ExtensionPay</a> to handle Pro purchases. The extension stores an anonymous license key and talks to extensionpay.com to check whether you have paid. This key (and nothing else) is kept in Chrome's synced storage (<code>chrome.storage.sync</code>), so Pro follows you to your other computers if Chrome sync is turned on for your profile. It contains no monitor, URL or page content. If you buy Pro, payment happens on ExtensionPay's and Stripe's pages, and they process your email address and payment details under their own privacy policies (see <a href="https://extensionpay.com/">extensionpay.com</a> and <a href="https://stripe.com/privacy">stripe.com/privacy</a>). The developer never sees your card details.</li>
+  </ul>
 
-<h2>Webhooks (Pro, optional)</h2>
-<p>If you enter a webhook address, Pagewake sends a short summary of each change to that address and to no other. You choose the recipient and can remove it at any time.</p>
+  <h2>Permissions</h2>
+  <p>Pagewake asks for access to a website only when you add a monitor for that website, and only for that website. You can revoke access at any time in Chrome's extension settings.</p>
 
-<h2>Payments and licence</h2>
-<p>Pro is sold through ExtensionPay, which relies on Stripe. Payment takes place on their pages; Pagewake never sees your card details. To recognise a paid licence, the ExtensionPay library stores an anonymous licence key and the paid status in Chrome's synced storage (<code>chrome.storage.sync</code>), so that the licence follows you to other computers signed in to the same Chrome profile. ExtensionPay and Stripe process the payment data under their own privacy policies.</p>
+  <h2>No analytics, no tracking, no ads</h2>
+  <p>The extension contains no analytics, telemetry, advertising or third-party tracking code.</p>
 
-<h2>Permissions</h2>
-<p>Pagewake asks for access to a site only when you add a monitor for that site, and only for that site. You can revoke access at any time in Chrome's extension settings.</p>
+  <h2>Deleting your data</h2>
+  <p>Delete a monitor in the dashboard to remove it and its history. Uninstalling the extension deletes all of its local data.</p>
 
-<h2>Sale and sharing of data</h2>
-<p>Pagewake does not sell, rent or transfer any user data, does not use it for advertising, and does not use it to assess creditworthiness.</p>
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:studio.souletie+pagewake@gmail.com">studio.souletie+pagewake@gmail.com</a></p>
 
-<h2>Deleting your data</h2>
-<p>Uninstalling Pagewake removes everything it stored on your device. You can also delete monitors one by one from the dashboard.</p>
-
-<h2>Changes</h2>
-<p>Any change to this policy will be published on this page with a new date.</p>
-
-<hr>
-
-<h1 id="fr">Politique de confidentialité de Pagewake</h1>
-<p class="meta">Dernière mise à jour : 30 octobre 2026 · S'applique à Pagewake 1.0.1 et aux versions suivantes</p>
-
-<h2>Qui nous sommes</h2>
-<p>Pagewake est éditée par FUTUR3000+, entreprise individuelle d'Alban Jean-Baptiste Souletie, 9 rue du Louvre, 75001 Paris (RCS Paris 878 163 567). Contact : <a href="mailto:studio.souletie+pagewake@gmail.com">studio.souletie+pagewake@gmail.com</a>.</p>
-
-<h2>Ce que Pagewake collecte</h2>
-<p>Rien. Pagewake n'a ni serveur ni compte. L'éditeur ne reçoit aucune donnée sur vous, votre navigation ou les pages que vous surveillez.</p>
-
-<h2>Ce qui reste dans votre navigateur</h2>
-<p>Vos surveillances (les adresses et éléments choisis), les 20 derniers instantanés texte de chacune et vos réglages sont stockés dans le stockage local de Chrome, sur votre appareil. Ils n'en sortent pas, sauf dans les deux cas ci-dessous.</p>
-<p>Les pages sont récupérées directement depuis votre ordinateur, sans vos cookies, à la fréquence que vous avez choisie.</p>
-
-<h2>Webhooks (Pro, facultatif)</h2>
-<p>Si vous saisissez une adresse de webhook, Pagewake y envoie un court résumé de chaque changement, et à elle seule. Vous choisissez le destinataire et pouvez le retirer à tout moment.</p>
-
-<h2>Paiement et licence</h2>
-<p>La version Pro est vendue via ExtensionPay, qui s'appuie sur Stripe. Le paiement se fait sur leurs pages ; Pagewake ne voit jamais vos données de carte. Pour reconnaître une licence payée, la bibliothèque ExtensionPay conserve une clé de licence anonyme et le statut payé dans le stockage synchronisé de Chrome (<code>chrome.storage.sync</code>), afin que la licence vous suive sur les autres ordinateurs connectés au même profil Chrome. ExtensionPay et Stripe traitent les données de paiement selon leurs propres politiques de confidentialité.</p>
-
-<h2>Autorisations</h2>
-<p>Pagewake ne demande l'accès à un site qu'au moment où vous ajoutez une surveillance pour ce site, et uniquement pour lui. Vous pouvez révoquer cet accès à tout moment dans les paramètres des extensions de Chrome.</p>
-
-<h2>Vente et partage de données</h2>
-<p>Pagewake ne vend, ne loue et ne transmet aucune donnée d'utilisateur, ne s'en sert pas pour de la publicité et ne l'utilise pas pour évaluer une solvabilité.</p>
-
-<h2>Supprimer vos données</h2>
-<p>Désinstaller Pagewake supprime tout ce qu'elle a stocké sur votre appareil. Vous pouvez aussi supprimer les surveillances une à une depuis le tableau de bord.</p>
-
-<h2>Modifications</h2>
-<p>Toute modification de cette politique sera publiée sur cette page avec une nouvelle date.</p>
+  <section class="lang" id="fr" lang="fr">
+    <h1>Politique de confidentialité de Pagewake</h1>
+    <div class="date">Dernière mise à jour : 27 octobre 2026</div>
+    <p><strong>En bref : Pagewake ne collecte, ne conserve ni ne vend aucune donnée personnelle. Vos surveillances et leur historique restent dans votre navigateur.</strong></p>
+    <h2>Ce que l'extension enregistre</h2>
+    <p>Les pages que vous choisissez de surveiller (URL, sélecteur d'élément éventuel, nom, réglages), jusqu'à 20 instantanés texte par surveillance, et vos préférences. Tout est stocké localement dans votre navigateur (<code>chrome.storage.local</code>) et n'est jamais envoyé au développeur ni à un serveur exploité par lui. Pagewake n'a ni serveur ni compte.</p>
+    <h2>Requêtes réseau</h2>
+    <ul>
+      <li><strong>Pages surveillées.</strong> Pour détecter les changements, votre navigateur télécharge les pages choisies directement depuis leurs sites, sans vos cookies.</li>
+      <li><strong>Webhooks (optionnel, Pro).</strong> Si vous saisissez une URL de webhook, chaque changement (nom de la surveillance, URL de la page, texte modifié) est envoyé à cette URL uniquement.</li>
+      <li><strong>Licence (ExtensionPay).</strong> Les achats Pro passent par <a href="https://extensionpay.com/">ExtensionPay</a> et Stripe. L'extension conserve une clé de licence anonyme et interroge extensionpay.com pour connaître votre statut. Cette clé, et elle seule, est gardée dans le stockage synchronisé de Chrome (<code>chrome.storage.sync</code>) : le Pro vous suit ainsi sur vos autres ordinateurs si la synchronisation Chrome est activée. Elle ne contient aucune surveillance, URL ni contenu de page. Le paiement a lieu sur les pages d'ExtensionPay et de Stripe, qui traitent votre e-mail et vos données de paiement selon leurs propres politiques. Le développeur ne voit jamais vos données de carte.</li>
+    </ul>
+    <h2>Autorisations</h2>
+    <p>Pagewake ne demande l'accès à un site qu'au moment où vous ajoutez une surveillance pour ce site, et uniquement pour lui. Vous pouvez le révoquer à tout moment dans les réglages des extensions de Chrome.</p>
+    <h2>Ni statistiques, ni pistage, ni publicité</h2>
+    <p>L'extension ne contient aucun code de mesure d'audience, de télémétrie, de publicité ou de pistage tiers.</p>
+    <h2>Suppression</h2>
+    <p>Supprimez une surveillance dans le tableau de bord pour effacer son historique. Désinstaller l'extension efface toutes ses données locales.</p>
+    <h2>Contact</h2>
+    <p><a href="mailto:studio.souletie+pagewake@gmail.com">studio.souletie+pagewake@gmail.com</a></p>
+  </section>
 </main>
 </body>
 </html>
