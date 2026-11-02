@@ -1,3 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pagewake</title>
-<meta http-equiv="refresh" content="0; url=privacy/"><link rel="canonical" href="privacy/"></head>
-<body style="font:16px system-ui;margin:48px 16px"><a href="privacy/">Pagewake privacy policy</a></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagewake: website change alerts for Chrome</title>
+<meta name="description" content="Pagewake is a Chrome extension that tells you when a web page changes and shows exactly what changed. No account, no cloud: your watch list stays in your browser.">
+<link rel="icon" href="img/icon128.png">
+<style>
+  :root { --bg:#f7f7f5; --card:#ffffff; --text:#1b1f1d; --muted:#5b635f; --accent:#2f5d50; --accent-soft:#e3ece8; --border:#e3e5e1; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#121514; --card:#1a1e1c; --text:#e7ebe8; --muted:#a3aca7; --accent:#6fb39d; --accent-soft:#1f2b27; --border:#2c322f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { display:flex; align-items:center; gap:12px; }
+  header img { width:40px; height:40px; border-radius:10px; }
+  header strong { font-size:20px; }
+  h1 { font-size: clamp(30px, 6vw, 44px); letter-spacing:-.02em; line-height:1.15; margin: 40px 0 12px; }
+  h2 { font-size: 22px; margin: 48px 0 12px; }
+  p, li { color: var(--muted); }
+  strong, b { color: var(--text); }
+  a { color: var(--accent); }
+  .lead { font-size: 19px; max-width: 640px; }
+  .cta { display:inline-block; margin-top:16px; padding:12px 20px; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
+  .note { font-size:14px; margin-top:8px; }
+  figure { margin: 32px 0 0; }
+  figure img { width:100%; height:auto; border-radius:10px; border:1px solid var(--border); display:block; }
+  figcaption { font-size:14px; color:var(--muted); margin-top:8px; }
+  .plans { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+  .plan { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px; }
+  .plan h3 { margin:0 0 4px; font-size:18px; }
+  .price { font-size:26px; font-weight:700; color:var(--text); margin:4px 0 8px; }
+  .plan ul { padding-left:18px; margin:8px 0 0; }
+  .pro { border-color: var(--accent); background: var(--accent-soft); }
+  dt { font-weight:600; color:var(--text); margin-top:16px; }
+  dd { margin:4px 0 0; color:var(--muted); }
+  footer { border-top:1px solid var(--border); margin-top:56px; padding-top:20px; font-size:14px; color:var(--muted); }
+  footer a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="img/icon128.png" alt=""><strong>Pagewake</strong></header>
+
+  <h1>Know when a web page changes.</h1>
+  <p class="lead">Pagewake is a Chrome extension that checks the pages you choose and tells you when they change: a price, a restock, a job list, a permit status. It shows exactly what changed, word by word. No account, no cloud: your watch list never leaves your browser.</p>
+  <a class="cta" href="#pricing">See plans</a>
+  <p class="note">Coming soon to the Chrome Web Store.</p>
+
+  <figure>
+    <img src="img/diff.jpg" alt="Pagewake dashboard showing added words in green and removed words struck through in red" width="1280" height="800" loading="lazy">
+    <figcaption>Every change, word by word, with the last 20 versions.</figcaption>
+  </figure>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>Open a page and click the Pagewake icon.</li>
+    <li>Watch the whole page, or point at one element: a price, a table, a block of text.</li>
+    <li>When it changes, you get a desktop notification and a clear before/after view.</li>
+  </ol>
+
+  <figure>
+    <img src="img/popup.jpg" alt="Pagewake popup on a product page, with the options Whole page and Pick an element" width="1280" height="800" loading="lazy">
+    <figcaption>Pick an element in one click.</figcaption>
+  </figure>
+
+  <h2 id="pricing">Pricing</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Free</h3>
+      <div class="price">0 €</div>
+      <ul>
+        <li>Up to 5 monitors</li>
+        <li>Checks every 30 minutes to once a day</li>
+        <li>Element picker, word-level diff, 20-version history, notifications</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro</h3>
+      <div class="price">4 € / month <span style="font-size:16px;font-weight:400;color:var(--muted)">or 49 € once</span></div>
+      <ul>
+        <li>Unlimited monitors</li>
+        <li>Checks as often as every minute</li>
+        <li>Webhooks: ntfy, Slack, Discord, Make, Zapier or any URL</li>
+        <li>Custom sound per monitor</li>
+        <li>JSON export and import</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Prices include all taxes. VAT not applicable, article 293 B of the French General Tax Code. Payment is processed by Stripe through ExtensionPay. The monthly plan can be cancelled at any time. Any first payment can be refunded within 14 days on request. See the <a href="terms/">terms of sale</a>.</p>
+
+  <h2>Questions</h2>
+  <dl>
+    <dt>Where is my data?</dt>
+    <dd>In your browser only. Pagewake has no server and no account. Read the <a href="privacy/">privacy policy</a>.</dd>
+    <dt>Which pages can it watch?</dt>
+    <dd>Public pages. Pages behind a login, a captcha or strict anti-bot protection can't be watched, and Pagewake says so instead of failing silently. Pages built with JavaScript work with the "Live render" option.</dd>
+    <dt>Does it check when Chrome is closed?</dt>
+    <dd>No. Checks run while Chrome is open, and missed checks run shortly after you reopen it.</dd>
+    <dt>I paid on another computer. How do I get Pro here?</dt>
+    <dd>Open the dashboard, then Settings, then "Already paid? Restore", and log in with the email you used to pay.</dd>
+    <dt>How do I cancel or get a refund?</dt>
+    <dd>Cancel from Settings, "Manage", in the extension. For a refund, write to the address below within 14 days of your first payment.</dd>
+  </dl>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:studio.souletie+pagewake@gmail.com">studio.souletie+pagewake@gmail.com</a></p>
+
+  <footer>
+    <a href="terms/">Terms of sale</a><a href="privacy/">Privacy</a><a href="legal/">Legal notice</a>
+    <p>Pagewake is published by FUTUR3000+, Paris, France.</p>
+  </footer>
+</main>
+</body>
+</html>
